@@ -4,7 +4,13 @@ import time
 from PIL import Image
 import streamlit as st
 import google.generativeai as genai
-
+# Cấu hình trang Streamlit
+st.set_page_config(
+    page_title="AI Trợ giúp",
+    layout="wide",
+    page_icon="✅",
+    initial_sidebar_state="expanded",
+)
 # Ẩn các phần không cần thiết của Streamlit
 hide_st_style = """
     <style>
@@ -18,14 +24,6 @@ hide_st_style = """
     </style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
-
-# Cấu hình trang Streamlit
-st.set_page_config(
-    page_title="AI Trợ giúp",
-    layout="wide",
-    page_icon="✅",
-    initial_sidebar_state="expanded",
-)
 
 # Hàm tạo dòng ký tự với độ trễ (simulate delay)
 def stream_output(text):
