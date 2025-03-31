@@ -4,6 +4,10 @@ import time
 from PIL import Image
 import streamlit as st
 import google.generativeai as genai
+from dotenv import load_dotenv
+import os
+# Load biến môi trường từ .env
+load_dotenv()
 # Cấu hình trang Streamlit
 st.set_page_config(
     page_title="AI Trợ giúp",
