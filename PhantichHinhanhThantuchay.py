@@ -81,7 +81,7 @@ def main():
 
     # Ô nhập liệu cho KEY
     google_api_key = st.text_input("Nhập KEY:", type="password")
-    if google_api_key=123456789:
+    if google_api_key==123456789:
         st.success("KEY đã được lưu!")
     else:
         st.warning("Vui lòng nhập KEY trước khi tiếp tục.")
