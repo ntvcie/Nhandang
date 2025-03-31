@@ -13,4 +13,4 @@ google-cloud-speech==2.30.0
 numpy==2.2.2
 pytesseract==0.3.13
 wl==0.1.2
-rich==10.14.0
+rich==13.9.4
