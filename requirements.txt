@@ -3,3 +3,4 @@ streamlit==1.41.1
 pillow==11.1.0
 google-generativeai==0.8.4
 python-dotenv==1.1.0
+dotenv==0.9.9
