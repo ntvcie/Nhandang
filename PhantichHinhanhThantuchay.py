@@ -6,6 +6,10 @@ import tempfile
 from PIL import ImageGrab
 from dotenv import load_dotenv
 import os
+import pyperclip
+from PIL import Image
+from io import BytesIO
+import base64
 load_dotenv()
 
 # Đảm bảo biến môi trường đã được thiết lập
