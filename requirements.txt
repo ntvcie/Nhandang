@@ -1,15 +1,5 @@
 pip==25.0.1
 streamlit==1.41.1
+pillow==11.1.0
 google-generativeai==0.8.4
-langchain==0.3.15
-langchain-community==0.3.15
-langchain_google_genai==2.0.9
-gdown==5.2.0
-PyAutoGUI==0.9.54
-pydub==0.25.1
-google-cloud==0.34.0
-google-cloud-texttospeech==2.24.0
-google-cloud-speech==2.30.0
-pytesseract==0.3.13
-wl==0.1.2
-rich<14,>=10.14.0
+python-dotenv==1.1.0
