@@ -38,7 +38,26 @@ def stream_output(text):
     for char in text:
         yield char
         time.sleep(0.01)  # Simulate delay
+def get_image_from_clipboard():
+    try:
+        # Lấy dữ liệu từ clipboard
+        clipboard_data = pyperclip.paste()
 
+        # Kiểm tra nếu dữ liệu là base64 (ảnh từ clipboard)
+        if clipboard_data.startswith("data:image"):
+            # Trích xuất phần base64 từ chuỗi
+            header, encoded = clipboard_data.split(",", 1)
+            image_data = base64.b64decode(encoded)
+
+            # Chuyển đổi dữ liệu base64 thành hình ảnh
+            image = Image.open(BytesIO(image_data))
+            return image
+        else:
+            st.warning("Không tìm thấy hình ảnh trong clipboard!")
+            return None
+    except Exception as e:
+        st.error(f"Lỗi khi đọc clipboard: {str(e)}")
+        return None
 
 def generate_image_caption(uploaded_file):
     if uploaded_file is not None:
@@ -79,7 +98,7 @@ def main():
     st.markdown("<h3 style='font-size: 18px; color: #1E90FF;'>🌄 Ứng dụng AI để phân tích, phát hiện cảnh báo hiện tượng than tự cháy.</h3>", unsafe_allow_html=True)
 
     if st.button("Xử lý"):
-        image = ImageGrab.grabclipboard()  # Lấy ảnh từ clipboard
+        image = get_image_from_clipboard()  # Lấy ảnh từ clipboard
 
         if image is not None:
             # Tạo hai cột: cột 1 hiển thị hình ảnh, cột 2 hiển thị trả lời của AI
