@@ -1,22 +1,12 @@
 import streamlit as st
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_community.vectorstores import FAISS
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.chains.question_answering import load_qa_chain
-from langchain.prompts import PromptTemplate
 from PIL import Image
 import google.generativeai as genai
 import time
-import os
 import tempfile
 from PIL import ImageGrab
-from google.cloud import texttospeech
-from google.cloud import speech
-from pydub.playback import play
+from dotenv import load_dotenv
 import os
-import string
-
+load_dotenv()
 
 # Đảm bảo biến môi trường đã được thiết lập
 #os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "gen-lang-client-0382763815-044c7b8f5c68.json"
@@ -49,7 +39,7 @@ def stream_output(text):
         yield char
         time.sleep(0.01)  # Simulate delay
 
-import pytesseract
+
 def generate_image_caption(uploaded_file):
     if uploaded_file is not None:
         # Mở tệp dưới dạng hình ảnh
