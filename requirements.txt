@@ -10,7 +10,6 @@ pydub==0.25.1
 google-cloud==0.34.0
 google-cloud-texttospeech==2.24.0
 google-cloud-speech==2.30.0
-numpy==2.2.2
 pytesseract==0.3.13
 wl==0.1.2
 rich<14,>=10.14.0
