@@ -9,7 +9,6 @@ from PIL import Image
 import google.generativeai as genai
 import time
 import os
-import pyautogui
 import tempfile
 from PIL import ImageGrab
 from google.cloud import texttospeech
@@ -20,7 +19,7 @@ import string
 
 
 # Đảm bảo biến môi trường đã được thiết lập
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "gen-lang-client-0382763815-044c7b8f5c68.json"
+#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "gen-lang-client-0382763815-044c7b8f5c68.json"
 hide_st_style = """
      <style>
             .block-container {
