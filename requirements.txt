@@ -13,3 +13,4 @@ numpy==2.2.2
 pytesseract==0.3.13
 wl-clipboard
 rich<14
+--upgrade pip
