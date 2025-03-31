@@ -79,6 +79,15 @@ def generate_image_caption(uploaded_file):
 def main():
     st.markdown("<h3 style='font-size: 18px; color: #1E90FF;'>🌄 Ứng dụng AI để phân tích, phát hiện cảnh báo hiện tượng than tự cháy.</h3>", unsafe_allow_html=True)
 
+    # Ô nhập liệu cho KEY
+    google_api_key = st.text_input("Nhập KEY:", type="password")
+    if google_api_key:
+        os.environ["GOOGLE_API_KEY"] = google_api_key
+        st.success("KEY đã được lưu!")
+    else:
+        st.warning("Vui lòng nhập GOOGLE_API_KEY trước khi tiếp tục.")
+        return
+
     # Widget tải lên hình ảnh
     uploaded_file = st.file_uploader("Tải lên hình ảnh", type=["png", "jpg", "jpeg"])
 
