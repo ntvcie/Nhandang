@@ -85,7 +85,7 @@ def main():
         os.environ["GOOGLE_API_KEY"] = google_api_key
         st.success("KEY đã được lưu!")
     else:
-        st.warning("Vui lòng nhập GOOGLE_API_KEY trước khi tiếp tục.")
+        st.warning("Vui lòng nhập KEY trước khi tiếp tục.")
         return
 
     # Widget tải lên hình ảnh
