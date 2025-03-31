@@ -1,8 +1,4 @@
-import itertools
-
 import streamlit as st
-from PyPDF2 import PdfReader
-from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -12,23 +8,16 @@ from langchain.prompts import PromptTemplate
 from PIL import Image
 import google.generativeai as genai
 import time
-import gdown
-import re
 import os
 import pyautogui
 import tempfile
 from PIL import ImageGrab
-#import simpleaudio as sa
 from google.cloud import texttospeech
 from google.cloud import speech
-from audio_recorder_streamlit import audio_recorder
-import pyttsx3
-from gtts import gTTS
-from pydub import AudioSegment
 from pydub.playback import play
 import os
 import string
-import speech_recognition as sr
+
 
 # Đảm bảo biến môi trường đã được thiết lập
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "gen-lang-client-0382763815-044c7b8f5c68.json"
