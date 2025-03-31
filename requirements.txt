@@ -11,5 +11,5 @@ google-cloud-texttospeech==2.24.0
 google-cloud-speech==2.30.0
 numpy==2.2.2
 pytesseract==0.3.13
-wl-clipboard
+wl==0.1.2
 rich==10.14.0
